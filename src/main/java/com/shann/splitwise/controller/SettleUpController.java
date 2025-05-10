@@ -28,7 +28,7 @@ public class SettleUpController {
      * @return the settle up group response dto
      */
     @PostMapping("/group")
-    public SettleUpGroupResponseDto settleUpGroup(@RequestBody SettleUpGroupRequestDTO requestDTO) {
+    public SettleUpGroupResponseDto settleUpGroup(@RequestBody SettleUpGroupRequestDto requestDTO) {
         var responseDto = new SettleUpGroupResponseDto();
         try {
             var transactions = settleUpService.settleUpGroup(requestDTO.getGroupId());
@@ -48,7 +48,7 @@ public class SettleUpController {
      * @return the settle up user response dto
      */
     @PostMapping("/user")
-    public SettleUpUserResponseDto settleUpUser(@RequestBody SettleUpUserRequestDTO requestDTO) {
+    public SettleUpUserResponseDto settleUpUser(@RequestBody SettleUpUserRequestDto requestDTO) {
         var responseDto = new SettleUpUserResponseDto();
         try {
             var transactions = settleUpService.settleUpUser(requestDTO.getUserId());
