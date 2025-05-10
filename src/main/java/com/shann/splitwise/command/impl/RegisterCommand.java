@@ -11,6 +11,6 @@ public class RegisterCommand implements Command {
     @Override
     public boolean match(String command) {
         String[] words = command.split(" ");
-        return words[0].equalsIgnoreCase("register");
+        return words.length == 4 && words[0].equalsIgnoreCase("register");
     }
 }

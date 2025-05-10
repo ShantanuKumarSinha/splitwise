@@ -5,5 +5,5 @@ import lombok.Data;
 
 @Data
 public class SettleUpUserRequestDTO {
-    private Long userId;
+    public Integer userId;
 }

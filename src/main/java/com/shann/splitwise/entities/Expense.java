@@ -15,7 +15,7 @@ public class Expense extends BaseModel {
     @ManyToOne
     @JoinColumn(name = "group_id", referencedColumnName = "id")
     private Group group;
-    @OneToMany(mappedBy = "expense")
+    @OneToMany(mappedBy = "expense", fetch = FetchType.EAGER)
     private List<ExpenseUser> expenseUsers;
     @Enumerated(EnumType.ORDINAL)
     private ExpenseType expenseType;

@@ -1,0 +1,14 @@
+package com.shann.splitwise.dtos;
+
+public enum ResponseStatusDto {
+    SUCCESS,
+    FAILURE,
+    INVALID_REQUEST,
+    USER_NOT_FOUND,
+    GROUP_NOT_FOUND,
+    TRANSACTION_NOT_FOUND,
+    INSUFFICIENT_BALANCE,
+    INVALID_AMOUNT,
+    UNAUTHORIZED_ACCESS,
+    INTERNAL_SERVER_ERROR
+}

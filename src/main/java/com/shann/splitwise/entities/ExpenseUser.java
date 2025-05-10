@@ -7,7 +7,8 @@ import lombok.Data;
 @Entity
 @Data
 public class ExpenseUser extends BaseModel {
-    @OneToOne
+    @ManyToOne
+    @JoinColumn(name = "user_id", referencedColumnName = "id")
     private User user;
     private double amount;
     private String currency;
