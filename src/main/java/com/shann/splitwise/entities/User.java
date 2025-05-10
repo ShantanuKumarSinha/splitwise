@@ -1,21 +1,21 @@
 package com.shann.splitwise.entities;
 
-import jakarta.persistence.Entity;
-import jakarta.persistence.ManyToMany;
+import com.shann.splitwise.enums.UserType;
+import jakarta.persistence.*;
 import lombok.Data;
 
 import java.util.List;
 
 @Entity
+@Table(name = "splitwise_user")
 @Data
 public class User extends BaseModel {
     private String name;
     private String email;
     private String password;
     private String phoneNumber;
-    private String profilePictureUrl;
-    private String address;
-    private String dateOfBirth;
-    @ManyToMany
+    @Enumerated(EnumType.ORDINAL)
+    private UserType userType;
+    @ManyToMany(mappedBy = "members")
     private List<Group> group;
 }

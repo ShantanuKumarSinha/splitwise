@@ -5,5 +5,5 @@ import lombok.Data;
 
 @Data
 public class SettleUpGroupRequestDTO {
-    private Long groupId;
+    private Integer groupId;
 }
